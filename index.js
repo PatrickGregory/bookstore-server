@@ -102,6 +102,11 @@ const bookstoreSchema = new mongoose.Schema({
 app.get('/', (req, res) => {
     res.send('Hello World!')
   })
+
+  // Add a route handler for the root URL
+app.get("/", (req, res) => {
+  res.send("Welcome to the backend server!");
+  });
   
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
